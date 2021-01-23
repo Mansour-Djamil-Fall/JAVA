@@ -19,8 +19,11 @@ public class TestDao {
      */
     public static void main(String[] args) {
        DaoClasse daoClasse=new DaoClasse();
-       Classe classe=new Classe("GLRS3", 20);
-       daoClasse.insert(classe);
+       //Classe classe=new Classe("GLRS3", 20);
+       //daoClasse.insert(classe);
+       daoClasse.findAll().forEach((classe)->{
+           System.out.println(classe);
+       });
        
     }
     
