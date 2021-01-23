@@ -15,11 +15,13 @@ import models.Professeur;
  *
  * @author Mansour Djamil
  */
-public class DaoPersonne {
+public class DaoPersonne implements IDao <Personne>{
     private final String SQL_SELECT_BY_CLASSE="select * from personne where type='Etudiant'and classe_id=?";
     
     private final String SQL_INSERT="INSERT INTO `personne` (`nomComplet`, `type`, `tuteur`, `module`, `grade`, `classe_id`) VALUES (?,?,?,?,?,?);";
     private final String SQL_SELECT_Professeur="select * from personne where matricule=?";
+    private final String SQL_SELECT_ALL_Professeur="select * from personne where type='Professeur'";
+    private final String SQL_SELECT_CONNECT="select * from personne where login=? and pwd=?";
     
     public List<Personne>findByClasse(Classe classe){
         List<Personne>lEtudiants=new ArrayList<>();
@@ -27,6 +29,7 @@ public class DaoPersonne {
         return lEtudiants;            
     }
     
+    @Override
     public int insert(Personne pers){
         int nbreLigne=0;
                 //Traitement
@@ -40,6 +43,17 @@ public class DaoPersonne {
         return professeur;
         
       }
+    
+    public List<Professeur> findProfesseur(){
+        List<Professeur> lProfesseurs=new ArrayList();
+        return lProfesseurs;
+    }
+    
+    public Personne findUserConnect(String login,String pwd){
+        Personne pers=null;
+        return pers;
+        
+    }
     
  
     /*INSERT INTO `personne` (`id`, `nomComplet`, `type`, `tuteur`, `module`, `grade`, `classe_id`, `matricule`) VALUES (NULL, 'Birane Baila Wane', 'Professeur', NULL, 'Webmastering;Java;C#;UML', 'Ingenieur', NULL, 'MAT20212');*/

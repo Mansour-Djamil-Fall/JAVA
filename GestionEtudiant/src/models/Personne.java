@@ -9,10 +9,12 @@ package models;
  *
  * @author Mansour Djamil
  */
-public abstract class Personne {
+public abstract class Personne{
     protected int id;
     protected String nomComplet;
     protected String type;
+    protected String login;
+    protected String pwd;
     
     
     //surcharge
@@ -58,6 +60,23 @@ public abstract class Personne {
         this.type = type;
     }
 
+    public String getLogin() {
+        return login;
+    }
+
+    public void setLogin(String login) {
+        this.login = login;
+    }
+
+    public String getPwd() {
+        return pwd;
+    }
+
+    public void setPwd(String pwd) {
+        this.pwd = pwd;
+    }
+
+    
     
     @Override
     public String toString() {

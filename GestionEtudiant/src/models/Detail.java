@@ -33,6 +33,13 @@ public class Detail {
         this.professeur = professeur;
     }
 
+    public Detail(Classe classe, Professeur professeur) {
+        this.classe = classe;
+        this.professeur = professeur;
+    }
+    
+    
+
    
     
 

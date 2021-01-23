@@ -68,7 +68,23 @@ public class Service {
             prof.setId(id);
         }
         Detail detail=new Detail(annee,modules,classe,prof);
-        return daoDetail.Insert(detail)!=0;
+        return daoDetail.insert(detail)!=0;
         
     }
+    
+    public List<Professeur> listerProfesseur(){
+        return daoPersonne.findProfesseur();
+    }
+    
+    public List<String> listerModulesProfesseurParClasse(Classe classe,Professeur professeur){
+        Detail detail=new Detail(classe,professeur);
+        return daoDetail.findModules(detail);
+        
+        
+    }
+    
+    public Personne seConnecter(String login, String pwd){
+        return daoPersonne.findUserConnect(login, pwd);
+        
+    } 
 }

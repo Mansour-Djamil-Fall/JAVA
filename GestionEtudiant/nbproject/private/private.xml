@@ -5,16 +5,15 @@
         <group>
             <file>file:/C:/Users/Mansour%20Djamil/Documents/NetBeansProjects/GestionEtudiant/src/dao/DaoPersonne.java</file>
             <file>file:/C:/Users/Mansour%20Djamil/Documents/NetBeansProjects/GestionEtudiant/src/dao/DaoClasse.java</file>
+            <file>file:/C:/Users/Mansour%20Djamil/Documents/NetBeansProjects/GestionEtudiant/src/dao/IDao.java</file>
+            <file>file:/C:/Users/Mansour%20Djamil/Documents/NetBeansProjects/GestionEtudiant/src/models/Admin.java</file>
             <file>file:/C:/Users/Mansour%20Djamil/Documents/NetBeansProjects/GestionEtudiant/src/gestionetudiant/GestionEtudiant.java</file>
+            <file>file:/C:/Users/Mansour%20Djamil/Documents/NetBeansProjects/GestionEtudiant/src/dao/test/TestDao.java</file>
             <file>file:/C:/Users/Mansour%20Djamil/Documents/NetBeansProjects/GestionEtudiant/src/models/Personne.java</file>
             <file>file:/C:/Users/Mansour%20Djamil/Documents/NetBeansProjects/GestionEtudiant/src/dao/DaoDetail.java</file>
             <file>file:/C:/Users/Mansour%20Djamil/Documents/NetBeansProjects/GestionEtudiant/src/metier/Service.java</file>
-            <file>file:/C:/Users/Mansour%20Djamil/Documents/NetBeansProjects/GestionEtudiant/src/cours/Liste/Exercice1.java</file>
-            <file>file:/C:/Users/Mansour%20Djamil/Documents/NetBeansProjects/GestionEtudiant/src/gestionetudiant/FXMLDocumentController.java</file>
-            <file>file:/C:/Users/Mansour%20Djamil/Documents/NetBeansProjects/GestionEtudiant/src/models/Classe.java</file>
-            <file>file:/C:/Users/Mansour%20Djamil/Documents/NetBeansProjects/GestionEtudiant/src/models/Etudiant.java</file>
-            <file>file:/C:/Users/Mansour%20Djamil/Documents/NetBeansProjects/GestionEtudiant/src/models/Professeur.java</file>
             <file>file:/C:/Users/Mansour%20Djamil/Documents/NetBeansProjects/GestionEtudiant/src/gestionetudiant/FXMLDocument.fxml</file>
+            <file>file:/C:/Users/Mansour%20Djamil/Documents/NetBeansProjects/GestionEtudiant/src/gestionetudiant/FXMLDocumentController.java</file>
             <file>file:/C:/Users/Mansour%20Djamil/Documents/NetBeansProjects/GestionEtudiant/src/models/Detail.java</file>
         </group>
     </open-files>
