@@ -6,11 +6,14 @@
 package metier;
 
 import dao.DaoClasse;
+import dao.DaoDetail;
 import dao.DaoPersonne;
 import java.util.List;
 import models.Classe;
+import models.Detail;
 import models.Etudiant;
 import models.Personne;
+import models.Professeur;
 
 /**
  *
@@ -19,11 +22,13 @@ import models.Personne;
 public class Service {
     private DaoClasse daoClasse;
     private DaoPersonne daoPersonne;
+    private DaoDetail daoDetail;
+    
     
     public Service(){
         daoClasse=new DaoClasse();
         daoPersonne=new DaoPersonne();
-        
+        daoDetail=new DaoDetail();  
     }
     
     public List<Personne> listerEtudiantParClasse(Classe classe){
@@ -40,10 +45,30 @@ public class Service {
     public List<Classe> ListerClasse(){
        return daoClasse.findAll();
     }
-    
+    /*
     public boolean creerEtudiant(Etudiant etu){
         return daoPersonne.insert(etu)!=0;
     }
     
+    public boolean creerProfesseur(Professeur prof){
+        return daoPersonne.insert(prof)!=0;
+    }
+    */
+    public boolean creerPersonne(Personne pers){
+        return daoPersonne.insert(pers)!=0;
+    }
     
+    public Professeur chercherProfesseur(String matricule){
+        return daoPersonne.findProfesseurByMatricule(matricule);
+        
+    }
+    public boolean attribuerClasse(Classe classe,Professeur prof,List<String>modules,String annee){
+        if (prof.getId()==0){
+            int id=daoPersonne.insert(prof);
+            prof.setId(id);
+        }
+        Detail detail=new Detail(annee,modules,classe,prof);
+        return daoDetail.Insert(detail)!=0;
+        
+    }
 }

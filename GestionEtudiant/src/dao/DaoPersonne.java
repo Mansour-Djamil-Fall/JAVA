@@ -41,5 +41,6 @@ public class DaoPersonne {
         
       }
     
-            
+ 
+    /*INSERT INTO `personne` (`id`, `nomComplet`, `type`, `tuteur`, `module`, `grade`, `classe_id`, `matricule`) VALUES (NULL, 'Birane Baila Wane', 'Professeur', NULL, 'Webmastering;Java;C#;UML', 'Ingenieur', NULL, 'MAT20212');*/
 }

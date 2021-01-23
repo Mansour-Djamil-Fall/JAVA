@@ -5,11 +5,19 @@
  */
 package dao;
 
+import models.Detail;
+
 /**
  *
  * @author Mansour Djamil
  */
 public class DaoDetail {
-    private final String SQL_INSERT="";
+    private final String SQL_INSERT="INSERT INTO `detail` (`classe_id`, `professeur_id`, `annee`, `modules`) VALUES (?,?,?,?);";
     
+    public int Insert(Detail detail){
+     int nbreLigne=0;
+     return nbreLigne;
+    }
 }
+
+
