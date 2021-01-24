@@ -6,9 +6,9 @@
 package dao;
 
 
-import java.sql.Connection;
+/*import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.PreparedStatement;
+import java.sql.PreparedStatement;*/
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -34,9 +34,7 @@ public class DaoClasse implements IDao <Classe> {
     @Override
     public int insert(Classe classe){
         int nbreLigne=0;
-      
-        
-           
+
         try {
             mysql.ouvrirConnexionBD();
             mysql.preparerRequete(SQL_INSERT);
@@ -44,14 +42,12 @@ public class DaoClasse implements IDao <Classe> {
             mysql.getPs().setString(1,classe.getLibelle());
             mysql.getPs().setInt(2,classe.getNbre());
               //Exécution de la requete
-            nbreLigne=mysql.executeMisAJour();
+            mysql.executeMisAJour();
         } catch (SQLException ex) {
             Logger.getLogger(DaoClasse.class.getName()).log(Level.SEVERE, null, ex);
         }finally{
             mysql.closeConnexion();
         }
-            
-    
         return nbreLigne;
     }
     
@@ -61,12 +57,12 @@ public class DaoClasse implements IDao <Classe> {
             
         try {
             mysql.ouvrirConnexionBD();
-            mysql.preparerRequete(SQL_INSERT);
+            mysql.preparerRequete(SQL_SELECT_ALL);
             ResultSet rs=mysql.executeSelect();
             while(rs.next()){
                 Classe cl=new Classe();
                 cl.setId(rs.getInt("id"));
-                cl.setLibelle(rs.getNString("libelle"));
+                cl.setLibelle(rs.getString("libelle"));
                 cl.setNbre(rs.getInt("nbre"));
                 
                 lClasses.add(cl);

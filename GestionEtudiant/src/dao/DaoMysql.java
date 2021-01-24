@@ -19,6 +19,7 @@ import java.util.logging.Logger;
  * @author Mansour Djamil
  */
 public class DaoMysql {
+   
     private Connection con=null;
     PreparedStatement ps=null;
 
@@ -49,11 +50,10 @@ public class DaoMysql {
         }
         
     }
-    public int executeMisAJour() throws SQLException {
-       
+    public int executeMisAJour() {
         int nbreLigne=0;
         try {
-            nbreLigne=ps.executeUpdate();
+          nbreLigne=ps.executeUpdate();
         } catch (SQLException ex) {
             Logger.getLogger(DaoMysql.class.getName()).log(Level.SEVERE, null, ex);
         }

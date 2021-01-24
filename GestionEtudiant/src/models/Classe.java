@@ -34,6 +34,12 @@ public class Classe {
         this.libelle = libelle;
         this.nbre = nbre;
     }
+
+    public Classe(int id) {
+        this.id = id;
+    }
+    
+    
     
     //getteur setteur
 

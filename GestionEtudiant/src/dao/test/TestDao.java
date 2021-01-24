@@ -6,6 +6,7 @@
 package dao.test;
 
 import dao.DaoClasse;
+import dao.DaoPersonne;
 import models.Classe;
 
 /**
@@ -18,13 +19,19 @@ public class TestDao {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-       DaoClasse daoClasse=new DaoClasse();
-       //Classe classe=new Classe("GLRS3", 20);
+       /*DaoClasse daoClasse=new DaoClasse();
+       //Classe classe=new Classe("TTL3", 20);
        //daoClasse.insert(classe);
        daoClasse.findAll().forEach((classe)->{
            System.out.println(classe);
-       });
+       });*/
+       
+       DaoPersonne daoPersonne=new DaoPersonne();
+       Classe cl=new Classe(1);
+       daoPersonne.findByClasse(cl).forEach(System.out::println);
+       System.out.println(daoPersonne.findProfesseurByMatricule("MAT20212"));
        
     }
+       
     
 }

@@ -31,7 +31,7 @@ public class Service {
         daoDetail=new DaoDetail();  
     }
     
-    public List<Personne> listerEtudiantParClasse(Classe classe){
+    public List<Etudiant> listerEtudiantParClasse(Classe classe){
         return daoPersonne.findByClasse(classe);
     }
     

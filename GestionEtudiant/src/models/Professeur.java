@@ -65,7 +65,23 @@ public class Professeur extends Personne {
     }
     
     
+    public String listToString(List<String> modules){
+        String stringModules="";
+        for(String elt:modules){
+           stringModules+=elt+";"; 
+        }
+        return stringModules;
+        
+    }
     
+    public List<String> StringTolist(String modules){
+        List<String> lModules=new ArrayList<>();
+        String tab[]=modules.split(";");
+        for(String elt :tab){
+            lModules.add(elt);
+        }
+         return lModules;
+    }
     
     
     
